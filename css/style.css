@@ -1,0 +1,168 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'); 
+
+body {
+	font-family: Lato, sans-serif;
+	font-weight: 700;
+}*/
+
+.clouds {}
+
+.clouds__first {
+	z-index: 100;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	width: 250px;
+	height: 100px;
+	background-color: #4c8ddc;
+	box-shadow: inset 5px 5px 5px 5px;
+	border-radius: 35px 35px;
+	transition: all 0, 2s ease 0, 5s;
+}
+
+.clouds__first:hover {
+	transition-property: width height;
+	transition-duration: 3s, 1s;
+	width: 300px;
+	height: 150px;
+	background-color: rgb(14, 29, 186);
+
+}
+
+.clouds__second {
+	position: absolute;
+	top: 40px;
+	left: 350px;
+	z-index: 100;
+	background-color: rgba(16, 16, 116, 0.836);
+	width: 275px;
+	height: 150px;
+	box-shadow: inset 5px 5px 5px 5px;
+	border-radius: 25px 25px;
+	animation-name: rotate-block;
+	animation-duration: 5s;
+
+
+}
+
+@keyframes rotate-block {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(90deg);
+	}
+}
+
+.clouds__third {
+	z-index: 100;
+	position: absolute;
+	top: 50px;
+	right: 60px;
+	background-color: rgb(47, 47, 224);
+	width: 250px;
+	height: 150px;
+	box-shadow: inset 5px 5px 5px 5px;
+	border-radius: 30px 30px;
+	animation-name: rotate-block2;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotate-block2 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+.sky {
+	height: 700px;
+
+}
+
+.sky__sky {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.938);
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+}
+
+.sky__star1 {
+	background-color: yellow;
+	width: 15px;
+	height: 10px;
+	z-index: 80;
+	position: absolute;
+	top: 15px;
+	left: 330px;
+	transform: skewX(60deg);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-name: block-star1;
+}
+
+@keyframes block-star1 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.sky__moon {
+	position: absolute;
+	top: 30px;
+	left: 850px;
+	background-color: yellow;
+	width: 150px;
+	height: 150px;
+	border-radius: 75px 75px;
+	box-shadow: inset 12px 0px 4px 3px;
+	animation-name: rotate-block3;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotate-block3 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+.sky:hover .sky__moon {
+	background-color: rgba(252, 252, 3, 0.728);
+	width: 155px;
+	height: 155px;
+	border-radius: 75px 75px;
+	box-shadow: inset 20px 5px 4px 3px;
+	transition-property: width height;
+	transition-duration: 3s, 1s;
+}
+
+.sky__land {
+	background-color: rgb(10, 62, 12);
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	box-shadow: inset 0px 0px 5px 0px;
+}
